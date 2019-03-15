@@ -27,14 +27,18 @@ def team_colors(team):
             return (x['colors']) 
 
 def team_names():
+    names=[]
     for i,x, in game_dictionary.items():
-        return (x['team_name'])
+        names.append(x['team_name'])
+    return names
 
 def player_numbers(team):
+    numbers = []
     for i,x, in game_dictionary.items():
         if x['team_name'] ==team:
             for i in x['players']:
-                return (x['players'][i]['number']) 
+                numbers.append(x['players'][i]['number'])
+    return numbers
 
 def player_stats(name):
     for i,x, in game_dictionary.items():
