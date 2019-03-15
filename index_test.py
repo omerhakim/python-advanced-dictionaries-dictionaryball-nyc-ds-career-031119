@@ -1,4 +1,8 @@
+import os
+os.system('pip install unittest2')
+
 import unittest2 as unittest
+
 from dictionaryball import game_dict, num_points_scored, shoe_size, team_colors, team_names, player_numbers, player_stats
 
 class TestDictionaryBall(unittest.TestCase):
