@@ -12,35 +12,35 @@ def num_points_scored(name):
         for z in (x['players']):
             
             if z==name:
-                print(x['players'][z]['points'])
+                return (x['players'][z]['points'])
                 
 def shoe_size(name):
     for i,x, in game_dictionary.items():
         for z in (x['players']):
             
             if z==name:
-                print(x['players'][z]['shoe'])
+                return (x['players'][z]['shoe'])
                 
 def team_colors(team):
     for i,x, in game_dictionary.items():
         if x['team_name'] ==team:
-            print (x['colors']) 
+            return (x['colors']) 
 
 def team_names():
     for i,x, in game_dictionary.items():
-        print (x['team_name'])
+        return (x['team_name'])
 
 def player_numbers(team):
     for i,x, in game_dictionary.items():
         if x['team_name'] ==team:
             for i in x['players']:
-                print (x['players'][i]['number']) 
+                return (x['players'][i]['number']) 
 
 def player_stats(name):
     for i,x, in game_dictionary.items():
         for z,y in x['players'].items():
             if z==name:
-                print(y)
+                return (y)
                 
 def most_points_scored():
     mostp = []
@@ -83,7 +83,7 @@ def big_shoe_rebounds():
     for i,x, in game_dictionary.items():
         for z,y in x['players'].items():
             if z==b:
-                print (y['rebounds'])
+                return (y['rebounds'])
 def home_team_name():
       return game_dict()['home']['team_name']
 def away_team_name():
@@ -99,8 +99,7 @@ def winning_team():
         else:
             for z,y in x['players'].items():
                 awayt +=y['points']
-    #print (homet)
-    #print (awayt)
+    
     if homet>awayt:
         return home_team_name()
     elif homet<awayt:
